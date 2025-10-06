@@ -2,7 +2,7 @@
 if (!defined('ABSPATH')) exit;
 
 function atlaswp_smart_search_posts($query_string) {
-    // Synonyms for AI-like behavior
+
     $synonyms = array(
         'computer' => array('pc','laptop','notebook','desktop'),
         'web'      => array('internet','online','website','browser'),
@@ -18,9 +18,10 @@ function atlaswp_smart_search_posts($query_string) {
     }
 
     return new WP_Query(array(
-        'post_type' => 'post',
+
+        'post_type'      => 'post',
         'posts_per_page' => -1,
-        's' => implode(' ', $related_terms),
-        'orderby' => 'relevance',
+        's'              => implode(' ', $related_terms),
+        'orderby'        => 'relevance',
     ));
 }

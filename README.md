@@ -57,9 +57,11 @@ It enhances user experience with a dynamic, filterable index and a built-in AI-p
 \[atlaswp\_index]
 
 
-Support
+\##Support
 If you have any questions, encounter a bug, or need assistance, please open an issue in the GitHub repository or visit our support page on Informaticasite. We are dedicated to helping you get the most out of our plugin.
 
+
+Update plugin: AtlasWP version, AJAX search fixed, shortcode handler and smart search engine added
 
 © 2025 Enea. All rights reserved. Licensed under GPL v2 or later.
 

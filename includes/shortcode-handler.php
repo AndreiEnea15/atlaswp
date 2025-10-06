@@ -1,15 +1,16 @@
 <?php
-if ( ! defined( 'ABSPATH' ) ) exit;
 
-function atlaswp_index_shortcode( $atts ) {
+if (!defined('ABSPATH')) exit;
+
+function atlaswp_index_shortcode($atts) {
     $atts = shortcode_atts(array(
         'order' => 'date',
         'sort'  => 'DESC',
     ), $atts, 'atlaswp_index');
 
-    ob_start(); ?>
+    ob_start();
+    ?>
     <div class="atlaswp-index-wrapper">
-
         <!-- Search Form -->
         <form id="atlaswp-search-form" class="atlaswp-search-form">
             <input type="text" id="atlaswp-search-query" placeholder="Search articles..." />
@@ -33,10 +34,12 @@ function atlaswp_index_shortcode( $atts ) {
         <div id="atlaswp-article-list">
             <?php
             $query = new WP_Query(array(
-                'post_type' => 'post',
+
+                'post_type'      => 'post',
                 'posts_per_page' => 10,
-                'orderby' => sanitize_text_field($atts['order']),
-                'order' => sanitize_text_field($atts['sort']),
+                'orderby'        => sanitize_text_field($atts['order']),
+                'order'          => sanitize_text_field($atts['sort']),
+
             ));
 
             if ($query->have_posts()) :
