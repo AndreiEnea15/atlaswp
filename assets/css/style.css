@@ -1,16 +1,16 @@
-.atlaswp-index-wrapper {
+.atlasis-index-wrapper {
     max-width: 900px;
     margin: 0 auto;
     font-family: Arial, sans-serif;
     line-height: 1.6;
 }
 
-.atlaswp-search-form {
+.atlasis-search-form {
     display: flex;
     margin-bottom: 20px;
 }
 
-.atlaswp-search-form input[type="text"] {
+.atlasis-search-form input[type="text"] {
     flex-grow: 1;
     padding: 10px;
     font-size: 16px;
@@ -19,7 +19,7 @@
     outline: none;
 }
 
-.atlaswp-search-form button {
+.atlasis-search-form button {
     padding: 10px 20px;
     font-size: 16px;
     background-color: #0073aa;
@@ -29,11 +29,11 @@
     cursor: pointer;
 }
 
-.atlaswp-search-form button:hover {
+.atlasis-search-form button:hover {
     background-color: #005a87;
 }
 
-.atlaswp-filters {
+.atlasis-filters {
     background-color: #f9f9f9;
     padding: 15px;
     border: 1px solid #eee;
@@ -41,14 +41,14 @@
     margin-bottom: 20px;
 }
 
-.atlaswp-filters h4 {
+.atlasis-filters h4 {
     margin-top: 0;
     margin-bottom: 10px;
     border-bottom: 1px solid #eee;
     padding-bottom: 5px;
 }
 
-.atlaswp-filters ul {
+.atlasis-filters ul {
     list-style: none;
     margin: 0;
     padding: 0;
@@ -57,14 +57,14 @@
     gap: 10px;
 }
 
-.atlaswp-filters ul li {
+.atlasis-filters ul li {
     background-color: #e2e2e2;
     padding: 5px 10px;
     border-radius: 3px;
     font-size: 14px;
 }
 
-#atlaswp-article-list .article-item {
+#atlasis-article-list .article-item {
     background-color: #fff;
     border: 1px solid #ddd;
     border-radius: 5px;
@@ -73,12 +73,12 @@
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-#atlaswp-article-list .article-item h2 {
+#atlasis-article-list .article-item h2 {
     margin-top: 0;
     font-size: 24px;
 }
 
-#atlaswp-article-list .article-item a {
+#atlasis-article-list .article-item a {
     text-decoration: none;
     color: #0073aa;
 }
