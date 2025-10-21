@@ -11,7 +11,7 @@ add_action('wp_ajax_nopriv_atlasis_search', 'atlasis_search_callback');
 function atlasis_search_callback() {
     check_ajax_referer('atlasis-search-nonce', 'nonce');
 
-    $query_string = isset($_POST['query']) ? sanitize_text_field($_POST['query']) : '';
+    $query_string = isset($_POST['query']) ? sanitize_text_field(wp_unslash($_POST['query'])) : '';
     $posts = atlasis_smart_search_posts($query_string);
 
     ob_start();
@@ -27,11 +27,13 @@ function atlasis_search_callback() {
                 </div>
                 <div class="entry-summary"><?php the_excerpt(); ?></div>
             </article>
-        <?php }
+        <?php
+        } // end while
     } else {
         echo '<p>' . esc_html__('No articles found for your search query.', 'atlasis') . '</p>';
     }
 
     wp_reset_postdata();
+
     wp_send_json_success(array('html' => ob_get_clean()));
-}
+} // end function
